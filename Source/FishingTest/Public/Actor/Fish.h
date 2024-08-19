@@ -31,9 +31,22 @@ protected:
 	virtual void Tick(float DeltaTime) override;
 
 public:
+	/// <summary>
+	/// Call if fish start catching the bait
+	/// </summary>
+	/// <param name="baitRef">: Reference of the bait</param>
 	void StartCatching(UStaticMeshComponent* baitRef);
+
+	/// <summary>
+	/// Make fish stop catching the bait
+	/// </summary>
+	/// <param name="isCatched">: True if catched, False if didn't catch the bait</param>
 	void StopCatching(bool isCatched);
 
+	/// <summary>
+	/// Get fish moving status
+	/// </summary>
+	/// <returns>True if fish moving, False if not</returns>
 	UFUNCTION(BlueprintCallable)
 	FORCEINLINE bool IsFishMoving() const { return IsMoving; }
 

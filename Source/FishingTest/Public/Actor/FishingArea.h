@@ -34,6 +34,10 @@ protected:
 	UFUNCTION()
 	void OnTriggerExit(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
+	/// <summary>
+	/// Trigger when bait appear on fishing area
+	/// </summary>
+	/// <param name="isAppearing">: True when bait appear, False when bait dissapear</param>
 	void OnBaitAppear(bool isAppearing);
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Fish", meta = (AllowPrivateAccess = "true"))

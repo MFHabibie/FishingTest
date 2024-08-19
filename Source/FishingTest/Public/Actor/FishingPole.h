@@ -40,12 +40,27 @@ protected:
 	void OnBaitHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
 public:	
+	/// <summary>
+	/// Attachment on bait to lock or unlock movement
+	/// </summary>
+	/// <param name="isAttaching">: True if lock bait, False if unlock</param>
 	void BaitAttaching(bool isAttaching);
 
+	/// <summary>
+	/// Add force to bait
+	/// </summary>
+	/// <param name="force">: Force value in percent</param>
 	void ThrowingBait(float force);
 
+	/// <summary>
+	/// Trigger when player pulling the fishing pole
+	/// </summary>
 	void Pulled();
 
+	/// <summary>
+	/// Condition if fishing pole is on pulling state
+	/// </summary>
+	/// <returns>True if fishing pole is pulling bait, False if not</returns>
 	FORCEINLINE bool IsInUse() const { return IsPulled; }
 
 private:

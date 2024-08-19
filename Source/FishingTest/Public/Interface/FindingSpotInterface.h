@@ -21,6 +21,10 @@ class FISHINGTEST_API IFindingSpotInterface
 	GENERATED_BODY()
 
 public:
+	/// <summary>
+	/// Interface using as trigger when inside fishing spot
+	/// </summary>
+	/// <param name="isSpoted">: True if player inside spot, False when outside</param>
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Fishing Interface")
 	void OnFindingSpot(bool isSpoted);
 

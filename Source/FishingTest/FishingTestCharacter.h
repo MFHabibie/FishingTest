@@ -45,18 +45,33 @@ protected:
 	UFUNCTION()
 	void Move(FVector Value);
 
+	/// <summary>
+	/// Interaction when begin press the input
+	/// </summary>
 	UFUNCTION()
 	void StartInteract();
 
+	/// <summary>
+	/// Interaction when holding the input
+	/// </summary>
 	UFUNCTION()
 	void Interact();
 
+	/// <summary>
+	/// Interaction when release the input
+	/// </summary>
 	UFUNCTION()
 	void StopInteract();
 
+	/// <summary>
+	/// Equip new fishing pole from object reference
+	/// </summary>
 	UFUNCTION()
 	void EquipFishingPole();
 
+	/// <summary>
+	/// Start pulling the fishing pole
+	/// </summary>
 	void Pulling();
 
 	UFUNCTION()
@@ -76,9 +91,17 @@ public:
 	virtual void OnCasting_Implementation(bool isStarting) override;
 	virtual void OnFishingCasting_Implementation(float power) override; 
 
+	/// <summary>
+	/// Return the fishing pole reference
+	/// </summary>
+	/// <returns>Reference of the fishing pole</returns>
 	FORCEINLINE TObjectPtr<AFishingPole> GetFishingPole() const { return FishingPole; }
 
 private:
+	/// <summary>
+	/// Call on holding the input when charging throw
+	/// </summary>
+	/// <returns></returns>
 	float HoldThrowing();
 
 	UPROPERTY()
