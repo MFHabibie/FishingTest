@@ -16,7 +16,10 @@ void UMainAnimInstance::NativeInitializeAnimation()
 	if (AActor* owner = GetOwningActor())
 	{
 		OwnerCharacter = Cast<AFishingTestCharacter>(owner);
-		OwnerCharacterMovement = OwnerCharacter->GetCharacterMovement();
+		if (OwnerCharacter)
+		{
+			OwnerCharacterMovement = OwnerCharacter->GetCharacterMovement();
+		}
 	}
 }
 
