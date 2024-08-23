@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Interface/FishingInterface.h"
 #include "GameFramework/Actor.h"
 #include "FishingArea.generated.h"
 
